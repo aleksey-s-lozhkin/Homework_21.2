@@ -1,7 +1,5 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
-from typing import Dict, Any, Optional
 import os
-import urllib.parse
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 # Настройки запуска
 hostName: str = "localhost"
@@ -12,10 +10,10 @@ HTML_FILE_PATH: str = "html/contacts.html"
 
 
 class MyServer(BaseHTTPRequestHandler):
-    """ Класс, который отвечает за обработку входящих запросов от клиентов """
+    """Класс, который отвечает за обработку входящих запросов от клиентов"""
 
     def _get_html_content(self) -> str:
-        """ Получить содержимое HTML-файла """
+        """Получить содержимое HTML-файла"""
         try:
             with open(HTML_FILE_PATH, 'r', encoding='utf-8') as file:
                 return file.read()
@@ -27,7 +25,7 @@ class MyServer(BaseHTTPRequestHandler):
             return ""
 
     def do_GET(self) -> None:
-        """ Метод для обработки входящих GET-запросов """
+        """Метод для обработки входящих GET-запросов"""
         html_content = self._get_html_content()
         if not html_content:
             return
@@ -38,7 +36,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.wfile.write(bytes(html_content, "utf-8"))
 
     def _print_post_data(self, content_length: int) -> None:
-        """ Вывести данные POST-запроса в консоль """
+        """Вывести данные POST-запроса в консоль"""
         post_data = self.rfile.read(content_length).decode('utf-8')
 
         print("=" * 50)
@@ -50,7 +48,7 @@ class MyServer(BaseHTTPRequestHandler):
         print("=" * 50)
 
     def do_POST(self) -> None:
-        """ Метод для обработки входящих POST-запросов """
+        """Метод для обработки входящих POST-запросов"""
         try:
             content_length = int(self.headers.get('Content-Length', 0))
 
@@ -65,7 +63,7 @@ class MyServer(BaseHTTPRequestHandler):
             success_message = '<div class="alert alert-success">Сообщение отправлено!</div>'
             modified_html = html_content.replace(
                 '<h1 class="text-center mb-4">Контакты</h1>',
-                f'<h1 class="text-center mb-4">Контакты</h1>\n{success_message}'
+                f'<h1 class="text-center mb-4">Контакты</h1>\n{success_message}',
             )
 
             self.send_response(200)
@@ -79,7 +77,7 @@ class MyServer(BaseHTTPRequestHandler):
 
 
 def main() -> None:
-    """ Основная функция запуска сервера """
+    """Основная функция запуска сервера"""
     if not os.path.exists(HTML_FILE_PATH):
         print(f"Ошибка: Файл '{HTML_FILE_PATH}' не найден!")
         exit(1)
