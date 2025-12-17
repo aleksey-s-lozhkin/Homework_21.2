@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления - Каталог</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light min-vh-100">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Боковое меню -->
+            <div class="col-md-3 col-lg-2 bg-dark min-vh-100 p-0 shadow position-relative">
+                <!-- Заголовок меню -->
+                <div class="p-3 border-bottom border-secondary">
+                    <h2 class="text-white fs-4 fw-semibold m-0 d-flex align-items-center">
+                        <span class="me-2">📋</span> Меню
+                    </h2>
+                </div>
+
+                <!-- Навигационные ссылки -->
+                <nav class="nav flex-column">
+                    <a class="nav-link text-secondary border-secondary p-3" href="index.html">
+                        <span class="me-2">🏠</span> Главная
+                    </a>
+                    <a class="nav-link active text-secondary border-secondary p-3" href="categories.html">
+                        <span class="me-2">📂</span> Категории
+                    </a>
+                    <a class="nav-link text-secondary border-secondary p-3" href="orders.html">
+                        <span class="me-2">📦</span> Заказы
+                    </a>
+                    <a class="nav-link text-secondary border-secondary p-3" href="contacts.html">
+                        <span class="me-2">📞</span> Контакты
+                    </a>
+                </nav>
+
+                <!-- Выпадающее меню пользователя -->
+                <div class="position-absolute bottom-0 w-100 border-top border-secondary">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle btn bg-transparent text-white w-100 text-start p-3 border-0 d-flex justify-content-between align-items-center"
+                                type="button"
+                                id="userDropdown"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <span>
+                                <span class="me-2">👤</span> Пользователь
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu bg-dark border border-secondary rounded-0 rounded-top-3" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item text-secondary" href="#"><span class="me-2">👤</span> Профиль</a></li>
+                            <li><hr class="dropdown-divider border-secondary"></li>
+                            <li><a class="dropdown-item text-secondary" href="#"><span class="me-2">🚪</span> Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Основное содержимое -->
+            <div class="col-md-9 col-lg-10 p-4 p-md-5">
+                <div class="container-fluid">
+                    <h1 class="text-center mb-4">Каталог товаров</h1>
+
+                    <!-- Карточки товаров - по 2 в ряд -->
+                    <div class="row justify-content-center g-5">
+
+                        <!-- Товар 1 -->
+                        <div class="col-lg-6">
+                            <div class="card h-100 shadow-lg border-0 rounded-4">
+                                <div class="card-body d-flex flex-column p-5">
+                                    <!-- Эскиз товара - увеличенный -->
+                                    <div class="text-center mb-4">
+                                        <div class="bg-light rounded p-5 mb-4 d-flex align-items-center justify-content-center" style="height: 250px;">
+                                            <span class="text-muted fw-bold fs-4">Эскиз товара 1</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Описание - увеличенный текст -->
+                                    <div class="flex-grow-1">
+                                        <p class="card-text text-muted fs-5 mb-5">Подробное описание товара с характеристиками и особенностями. Здесь можно разместить детальную информацию о продукте, его преимуществах и возможностях использования.</p>
+                                    </div>
+
+                                    <!-- Кнопки View и Edit - увеличенные -->
+                                    <div class="d-flex justify-content-start gap-3">
+                                        <button class="btn btn-outline-dark btn-lg px-4 py-2">View</button>
+                                        <button class="btn btn-outline-dark btn-lg px-4 py-2">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Товар 2 -->
+                        <div class="col-lg-6">
+                            <div class="card h-100 shadow-lg border-0 rounded-4">
+                                <div class="card-body d-flex flex-column p-5">
+                                    <!-- Эскиз товара - увеличенный -->
+                                    <div class="text-center mb-4">
+                                        <div class="bg-light rounded p-5 mb-4 d-flex align-items-center justify-content-center" style="height: 250px;">
+                                            <span class="text-muted fw-bold fs-4">Эскиз товара 2</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Описание - увеличенный текст -->
+                                    <div class="flex-grow-1">
+                                        <p class="card-text text-muted fs-5 mb-5">Подробное описание товара с характеристиками и особенностями. Здесь можно разместить детальную информацию о продукте, его преимуществах и возможностях использования.</p>
+                                    </div>
+
+                                    <!-- Кнопки View и Edit - увеличенные -->
+                                    <div class="d-flex justify-content-start gap-3">
+                                        <button class="btn btn-outline-dark btn-lg px-4 py-2">View</button>
+                                        <button class="btn btn-outline-dark btn-lg px-4 py-2">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Товар 3 -->
+                        <div class="col-lg-6">
+                            <div class="card h-100 shadow-lg border-0 rounded-4">
+                                <div class="card-body d-flex flex-column p-5">
+                                    <!-- Эскиз товара - увеличенный -->
+                                    <div class="text-center mb-4">
+                                        <div class="bg-light rounded p-5 mb-4 d-flex align-items-center justify-content-center" style="height: 250px;">
+                                            <span class="text-muted fw-bold fs-4">Эскиз товара 3</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Описание - увеличенный текст -->
+                                    <div class="flex-grow-1">
+                                        <p class="card-text text-muted fs-5 mb-5">Подробное описание товара с характеристиками и особенностями. Здесь можно разместить детальную информацию о продукте, его преимуществах и возможностях использования.</p>
+                                    </div>
+
+                                    <!-- Кнопки View и Edit - увеличенные -->
+                                    <div class="d-flex justify-content-start gap-3">
+                                        <button class="btn btn-outline-dark btn-lg px-4 py-2">View</button>
+                                        <button class="btn btn-outline-dark btn-lg px-4 py-2">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Товар 4 -->
+                        <div class="col-lg-6">
+                            <div class="card h-100 shadow-lg border-0 rounded-4">
+                                <div class="card-body d-flex flex-column p-5">
+                                    <!-- Эскиз товара - увеличенный -->
+                                    <div class="text-center mb-4">
+                                        <div class="bg-light rounded p-5 mb-4 d-flex align-items-center justify-content-center" style="height: 250px;">
+                                            <span class="text-muted fw-bold fs-4">Эскиз товара 4</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Описание - увеличенный текст -->
+                                    <div class="flex-grow-1">
+                                        <p class="card-text text-muted fs-5 mb-5">Подробное описание товара с характеристиками и особенностями. Здесь можно разместить детальную информацию о продукте, его преимуществах и возможностях использования.</p>
+                                    </div>
+
+                                    <!-- Кнопки View и Edit - увеличенные -->
+                                    <div class="d-flex justify-content-start gap-3">
+                                        <button class="btn btn-outline-dark btn-lg px-4 py-2">View</button>
+                                        <button class="btn btn-outline-dark btn-lg px-4 py-2">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Минимальный CSS только для hover-эффектов -->
+    <style>
+        .nav-link:hover, .dropdown-toggle:hover {
+            color: #fff !important;
+            background-color: #495057 !important;
+        }
+
+        .nav-link.active {
+            color: #fff !important;
+            background-color: #495057 !important;
+        }
+
+        .dropdown-item:hover {
+            color: #fff !important;
+            background-color: #343a40 !important;
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: #343a40;
+            border-color: #343a40;
+            color: #fff;
+            transform: scale(1.05);
+            transition: all 0.3s;
+        }
+
+        .btn-dark:hover {
+            background-color: #23272b;
+            border-color: #1d2124;
+            transform: scale(1.05);
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .bg-dark {
+                min-height: auto !important;
+            }
+            .position-absolute {
+                position: static !important;
+            }
+
+            /* На мобильных делаем карточки на всю ширину */
+            .col-lg-6 {
+                width: 100%;
+            }
+
+            /* Уменьшаем паддинги на мобильных */
+            .card-body {
+                padding: 1.5rem !important;
+            }
+
+            /* Уменьшаем высоту эскиза на мобильных */
+            .bg-light[style*="height: 250px"] {
+                height: 180px !important;
+                padding: 2rem !important;
+            }
+        }
+    </style>
+</body>
+</html>
